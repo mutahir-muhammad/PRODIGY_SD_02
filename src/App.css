@@ -1,0 +1,147 @@
+body {
+  font-family: monospace;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #000000;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(221, 29, 141, 0.6), rgba(35, 199, 240, 0.6));
+  animation: moveBlobs 12s infinite;
+  opacity: 0.7;
+}
+
+.blob1 {
+  width: 700px;
+  height: 700px;
+  top: -200px;
+  left: -200px;
+}
+
+.blob2 {
+  width: 700px;
+  height: 700px;
+  bottom: -100px;
+  right: -100px;
+}
+
+@keyframes moveBlobs {
+
+  0%,
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+
+  50% {
+    transform: scale(1.2) translate(50px, 50px);
+  }
+
+  75% {
+    transform: scale(0.8) translate(-50px, 50px);
+  
+  }
+}
+
+.number-guessing-game {
+  position: relative;
+  z-index: 1;
+  max-width: 400px;
+  margin: 20px;
+  padding: 40px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  color: #fff;
+}
+/* 
+.number-guessing-game:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+} */
+
+.end-game-message {
+  margin-top: 20px;
+}
+
+#heading {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+#prompt {
+  display: block;
+  margin: 20px 0;
+  font-size: 18px;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.guess-input {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 12px;
+  width: 80%;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  text-align: center;
+}
+
+/* .guess-input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+} */
+
+.guess-button {
+  width: 180px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin: 10px auto;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(127deg, rgba(221, 29, 141, 0.6), rgba(35, 199, 240, 0.6));
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  color: #fff;
+}
+
+.guess-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.feedback {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
